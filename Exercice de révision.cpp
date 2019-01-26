@@ -25,22 +25,22 @@ public :
 };
 
 template <typename T>
-class triangle : public point
+class triangle : public point<T>
 {
 	T base, hauteur;
 public :
 	triangle() { base = 0; hauteur = 0; }
-	triangle(point a, point b, point c) { base = a - b; hauteur = a - c; }
+	triangle(point<T> a, point<T> b, point<T> c) { base = a - b; hauteur = a - c; }
 
 };
 
 template <typename T>
-class rectangle : public point
+class rectangle : public point<T>
 {
 	T longueur, largeur;
 public :
 	rectangle() { longueur = 0; largeur = 0; }
-	rectangle(point a, point b, point c) { longueur = a - b; largeur = a - c; }
+	rectangle(point<T> a, point<T> b, point<T> c) { longueur = a - b; largeur = a - c; }
 };
 
 int main()
